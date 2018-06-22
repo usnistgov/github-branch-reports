@@ -2,13 +2,13 @@
     "name": "github-issue-reports",
     "version": "0.1.4",
     "description": "Generate reports on Github issues.",
-    "homepage": "https://github.com/thody/github-issue-reports",
+    "homepage": "https://github.com/usnistgov/github-issue-reports",
     "repository": {
         "type": "git",
-        "url": "git@github.com:thody/github-issue-reports.git"
+        "url": "https://github.com/usnistgov/github-issue-reports"
     },
     "bugs": {
-        "url": "https://github.com/thody/github-issue-reports"
+        "url": "https://github.com/usnistgov/github-issue-reports"
     },
     "main": "bin/github-issue-reports.js",
     "preferGlobal": true,
