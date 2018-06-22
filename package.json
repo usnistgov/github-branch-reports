@@ -1,25 +1,24 @@
 {
     "name": "github-issue-reports",
     "version": "0.1.4",
-    "description": "Generate reports on Github issues.",
-    "homepage": "https://github.com/usnistgov/github-issue-reports",
-    "repository": {
-        "type": "git",
-        "url": "https://github.com/usnistgov/github-issue-reports"
-    },
-    "bugs": {
-        "url": "https://github.com/usnistgov/github-issue-reports"
-    },
-    "main": "bin/github-issue-reports.js",
-    "preferGlobal": true,
+    "description": "issue reporter",
+    "main": "github-issue-reports.js",
     "bin": {
-        "github-issue-reports": "bin/github-issue-reports.js"
+        "github-issue-reports": "github-issue-reports.js"
     },
     "scripts": {
         "test": "echo \"Error: no test specified\" && exit 1"
     },
-    "author": "Adam Thody",
-    "license": "MIT",
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/usnistgov/github-issue-reports.git"
+    },
+    "author": "marty burns",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/usnistgov/github-issue-reports/issues"
+    },
+    "homepage": "https://github.com/usnistgov/github-issue-reports#readme",
     "dependencies": {
         "commander": "^2.5.1",
         "dateformat": "^1.0.11",
