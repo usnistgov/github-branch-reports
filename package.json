@@ -1,10 +1,10 @@
 {
-    "name": "github-issue-reports",
-    "version": "0.1.4",
-    "description": "issue reporter",
-    "main": "github-issue-reports.js",
+    "name": "github-branch-reports",
+    "version": "0.1.0",
+    "description": "branch name reporter",
+    "main": "github-branch-reports.js",
     "bin": {
-        "github-issue-reports": "github-issue-reports.js"
+        "github-branch-reports": "github-branch-reports.js"
     },
     "scripts": {
         "test": "echo \"Error: no test specified\" && exit 1"
@@ -13,7 +13,7 @@
         "type": "git",
         "url": "git+https://github.com/usnistgov/github-issue-reports.git"
     },
-    "author": "marty burns",
+    "author": "Wendy Guo",
     "license": "ISC",
     "bugs": {
         "url": "https://github.com/usnistgov/github-issue-reports/issues"
