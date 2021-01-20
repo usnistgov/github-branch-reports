@@ -26,9 +26,9 @@ module.exports = {
     generate: function(config) {
 
         var options = {
-            uri: 'https://api.github.com/repos/' + config.owner + '/' + config.repo + '/issues?state=all',
+            uri: 'https://api.github.com/repos/' + config.owner + '/' + config.repo + '/branches?state=all',
             headers: {
-                'User-Agent': 'github-issue-reports'
+                'User-Agent': 'github-branch-reports'
             }
         };
 
@@ -38,39 +38,39 @@ module.exports = {
 
         rp(options)
             .then(function(result) {
-                var issueList = JSON.parse(result);
+                var branchList = JSON.parse(result);
                 var runDate = moment();
 
-                var issues = _.map(issueList, function(issue) {
+                var brunchs = _.map(branchList, function(branch) {
                     return {
-                        url: issue.html_url,
-                        number: issue.number,
-                        title: issue.title,
-                        createdBy: issue.user.login,
-                        createdAt: moment(issue.created_at),
-                        comments: issue.comments,
-                        closedAt: moment(issue.closed_at),
-                        body: issue.body,
-                        state: issue.state,
-                        labels: _.map(issue.labels, function(label) {
+                        url: branch.html_url,
+                        number: branch.number,
+                        title: branch.title,
+                        createdBy: branch.user.login,
+                        createdAt: moment(branch.created_at),
+                        //comments: issue.comments,
+                        //closedAt: moment(branch.closed_at),
+                        //body: issue.body,
+                        //state: issue.state,
+                        labels: _.map(branch.labels, function(label) {
                             return label.name;
                         })
                     }
                 });
 
-                var openIssues = _.filter(issues, function(issue) {
-                    return issue.state === 'open';
-                });
+                //var openIssues = _.filter(issues, function(issue) {
+                //    return issue.state === 'open';
+                //});
 
-                var closedIssues = _.filter(issues, function(issue) {
-                    return issue.state === 'closed';
-                });
+                //var closedIssues = _.filter(issues, function(issue) {
+                //    return issue.state === 'closed';
+                //});
 
                 var templatePath = path.join(__dirname, 'report.jade');
                 var template = jade.compileFile(templatePath);
                 var context = {
-                    openIssues: openIssues,
-                    closedIssues: closedIssues,
+                    //openIssues: openIssues,
+                    //closedIssues: closedIssues,
                     runDate: runDate,
                     repo: config.repo
                 };
@@ -81,7 +81,7 @@ module.exports = {
                     if (err) {
                         console.log(err);
                     } else {
-                        console.log('Generated issue report %s', fileName);
+                        console.log('Generated branch report %s', fileName);
                     }
                 });
             })

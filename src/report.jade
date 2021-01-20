@@ -1,14 +1,17 @@
 doctype html
 html
     head
-        title #{repo} Issue Report
+        title #{repo} BranchName Report
         link(rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css")
     body
         div.container
-            h1 #{repo} Issue Report
+            h1 #{repo} Branch Report
             p Generated: #{runDate.format('MMMM Do, YYYY @ h:mm:ss a')}
-            h2 Open Issues&nbsp;
-                small (#{openIssues.length})
+            
+            h2 BranchName;
+                small(#{branches.length})
+            //h2 Open Issues&nbsp;
+            //    small (#{openIssues.length})
             table.table.table-condensed.table-striped
                 thead
                     tr
@@ -17,10 +20,10 @@ html
                         th Tags
                         th Created
                 tbody
-                    each issue in openIssues
+                    each branch in branches
                         tr
-                            td= issue.number
-                            td: a(href=issue.url)= issue.title
+                            td= branch.number
+                            td: a(href=branch.url)= branch.title
                             td= issue.labels.join(', ')
                             td= issue.createdAt.format('MMMM Do, YYYY')
 
