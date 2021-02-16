@@ -1,30 +1,27 @@
 {
-    "name": "github-branch-reports",
-    "version": "0.1.0",
-    "description": "branch name reporter",
-    "main": "github-branch-reports.js",
-    "bin": {
-        "github-branch-reports": "github-branch-reports.js"
-    },
-    "scripts": {
-        "test": "echo \"Error: no test specified\" && exit 1"
-    },
-    "repository": {
-        "type": "git",
-        "url": "git+https://github.com/usnistgov/github-issue-reports.git"
-    },
-    "author": "Wendy Guo",
-    "license": "ISC",
-    "bugs": {
-        "url": "https://github.com/usnistgov/github-issue-reports/issues"
-    },
-    "homepage": "https://github.com/usnistgov/github-issue-reports#readme",
-    "dependencies": {
-        "commander": "^2.5.1",
-        "dateformat": "^1.0.11",
-        "jade": "^1.8.2",
-        "lodash": "^2.4.1",
-        "moment": "^2.8.4",
-        "request-promise": "^0.3.2"
-    }
+  "name": "github-branch-reports",
+  "version": "0.1.0",
+  "description": "branch name reporter",
+  "main": "github-branch-reports.js",
+  "bin": {
+    "github-branch-reports": "github-branch-reports.js"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Wendy Guo",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/usnistgov/github-branch-reports/issues"
+  },
+  "homepage": "https://github.com/usnistgov/github-branch-reports#readme",
+  "dependencies": {
+    "commander": "^2.5.1",
+    "dateformat": "^1.0.11",
+    "jade": "^1.8.2",
+    "lodash": "^2.4.1",
+    "moment": "^2.8.4",
+    "request-promise": "^0.3.2"
+  },
+  "devDependencies": {}
 }
