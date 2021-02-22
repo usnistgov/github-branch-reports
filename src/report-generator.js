@@ -40,21 +40,28 @@ module.exports = {
             .then(function(result) {
                 var branchList = JSON.parse(result);
                 var runDate = moment();
-                console.log(branchList)
+
+                //console.log(branchList)
 
                 var branches = _.map(branchList, function (branch){
                     return {
                         _name: branch.name
                     }
                 });
-                //console.log(_name)
+                
+                //console.log(branches);
+                
 
                 var templatePath = path.join(__dirname, 'report.jade');
                 var template = jade.compileFile(templatePath);
                 var context = {
+                    _branches: branches,
                     runDate: runDate,
                     repo: config.repo
                 };
+
+                console.log(context);
+
                 var html = template(context);
 
                 var fileName = getReportName(config.repo, config.owner);
