@@ -12,4 +12,4 @@ the entire brunch list with someone who doesn't have access to your repo, for ex
 
 ## Sample Report
 
-![Sample Report](report-sample.png)
+![Sample Report](report-sample.png) 
