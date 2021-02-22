@@ -40,37 +40,18 @@ module.exports = {
             .then(function(result) {
                 var branchList = JSON.parse(result);
                 var runDate = moment();
+                console.log(branchList)
 
-                var brunchs = _.map(branchList, function(branch) {
+                var branches = _.map(branchList, function (branch){
                     return {
-                        url: branch.html_url,
-                        number: branch.number,
-                        title: branch.title,
-                        createdBy: branch.user.login,
-                        createdAt: moment(branch.created_at),
-                        //comments: issue.comments,
-                        //closedAt: moment(branch.closed_at),
-                        //body: issue.body,
-                        //state: issue.state,
-                        labels: _.map(branch.labels, function(label) {
-                            return label.name;
-                        })
+                        _name: branch.name
                     }
                 });
-
-                //var openIssues = _.filter(issues, function(issue) {
-                //    return issue.state === 'open';
-                //});
-
-                //var closedIssues = _.filter(issues, function(issue) {
-                //    return issue.state === 'closed';
-                //});
+                //console.log(_name)
 
                 var templatePath = path.join(__dirname, 'report.jade');
                 var template = jade.compileFile(templatePath);
                 var context = {
-                    //openIssues: openIssues,
-                    //closedIssues: closedIssues,
                     runDate: runDate,
                     repo: config.repo
                 };
@@ -79,7 +60,7 @@ module.exports = {
                 var fileName = getReportName(config.repo, config.owner);
                 fs.writeFile(fileName, html, function(err) {
                     if (err) {
-                        console.log(err);
+                        console.log("ERROR-------------->>", err);
                     } else {
                         console.log('Generated branch report %s', fileName);
                     }

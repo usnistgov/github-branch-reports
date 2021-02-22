@@ -13,3 +13,10 @@ the entire brunch list with someone who doesn't have access to your repo, for ex
 ## Sample Report
 
 ![Sample Report](report-sample.png)
+
+## Steps
+Goto github-branch-reports 
+[github-branch-reports]$ npm install -g ( -g is for global)
+[github-branch-reports]$ github-branch-reports 
+Usage: github-branch-reports -o <owner> -r <repo> [-t <token>]
+e.g. [github-branch-reports]$ github-branch-reports -o usnistgov -r github-branch-reports

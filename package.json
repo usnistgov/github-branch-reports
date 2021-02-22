@@ -2,26 +2,30 @@
   "name": "github-branch-reports",
   "version": "0.1.0",
   "description": "branch name reporter",
-  "main": "github-branch-reports.js",
+  "homepage": "https://github.com/usnistgov/github-branch-reports#readme",
+  "bugs": {
+    "url": "https://github.com/usnistgov/github-branch-reports/issues"
+  },
+  "main": "bin/github-branch-reports.js",
+  "preferGlobal": true,
   "bin": {
-    "github-branch-reports": "github-branch-reports.js"
+    "github-branch-reports": "bin/github-branch-reports.js"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Wendy Guo",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/usnistgov/github-branch-reports/issues"
-  },
-  "homepage": "https://github.com/usnistgov/github-branch-reports#readme",
   "dependencies": {
+    "agentkeepalive": "^4.1.4",
+    "clean-css": "^5.0.1",
     "commander": "^2.5.1",
     "dateformat": "^1.0.11",
-    "jade": "^1.8.2",
-    "lodash": "^2.4.1",
+    "jade": "^1.11.0",
+    "lodash": "^4.17.20",
     "moment": "^2.8.4",
-    "request-promise": "^0.3.2"
-  },
-  "devDependencies": {}
+    "request": "^2.88.2",
+    "request-promise": "^4.2.6",
+    "transformers": "^1.8.3"
+  }
 }
