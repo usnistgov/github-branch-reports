@@ -1,0 +1,1 @@
+# a shell script to run all project repo and generate a report for each repo#!/bin/shgithub-branch-reports -o usnistgov -r github-branch-reportsgithub-branch-reports -o usnistgov -r ucef
