@@ -1,1 +1,0 @@
-# a shell script to run all project repo and generate a report for each repogithub-branch-reports -o usnistgov -r cpstestbedgithub-branch-reports -o usnistgov -r github-branch-reports

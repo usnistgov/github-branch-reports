@@ -40,6 +40,7 @@ module.exports = {
             .then(function(result) {
                 var branchList = JSON.parse(result);
                 var runDate = moment();
+                var update = 
 
                 //console.log(branchList)
 
